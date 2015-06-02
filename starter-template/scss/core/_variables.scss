@@ -9,3 +9,31 @@
 //module BORDERS
 
 //module LISTS
+
+//module SELECTBOX
+$select-arrow: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2228%22%20height%3D%228%22%20viewBox%3D%220%200%2010%208%22%3E%3Cpath%20d%3D%22M10%200L5%208%200%200%22/%3E%3C/svg%3E';
+$select-arrow-fallback: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAYAAAAbQcSUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjgyMUM3N0Q1MDU0NjExRTU4MEYxRkIwQ0MzNUY0MDEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjgyMUM3N0Q2MDU0NjExRTU4MEYxRkIwQ0MzNUY0MDEwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODIxQzc3RDMwNTQ2MTFFNTgwRjFGQjBDQzM1RjQwMTAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODIxQzc3RDQwNTQ2MTFFNTgwRjFGQjBDQzM1RjQwMTAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6ZeULzAAAAX0lEQVR42mJgYGC4D8T/CeD7////ZyCEQcCBCMMciDUMBObjMQgkx0CKYQJA/B6LQe+hciQZBgIJWAxLgEmSahgI7EcyaD+yBDmGKSAZpkCqYSxohj0A4kYkNkkAIMAA2vLoX53x3CkAAAAASUVORK5CYII=';
+$select-border-color: #ccc;
+$select-border-radius: 3px;
+$select-border-size: 1px;
+
+//module CHECKBOX
+$checkbox-size: 20px;
+$checkbox-border-size: 1px;
+$checkbox-full-size: 22px; //size + 2x border
+
+//module RADIO BUTTON
+$radio-size: 20px;
+$radio-border-size: 1px;
+$radio-full-size: 22px; //size + 2x border
+
+//module FILE UPLOAD
+$file-input-border-color: #ccc;
+$file-input-border-radius: 3px;
+$file-input-border-size: 1px;
+
+//module TEXT FIELD
+$text-field-border-radius: 3px;
+$text-field-border-size: 1px;
+$text-field-border-color: #ccc;
+

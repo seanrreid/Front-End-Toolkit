@@ -1,3 +1,248 @@
 [disabled] {
 	cursor: not-allowed;
 }
+
+.field-wrapper {
+	margin: 0 0 15px 0;
+	position: relative;
+
+	input[type="text"] {
+		border: $text-field-border-size solid $text-field-border-color;
+		border-radius: $text-field-border-radius;
+		padding: 5px;
+		margin: 3px 0;
+		display: block;
+
+		&:focus {
+			box-shadow: 0 0 8px #ccc;
+			outline: 0;
+		}
+
+		&[disabled],
+		&[readonly] {
+			opacity: 0.5;
+		}
+	}
+}
+
+//module selectbox
+.field-select {
+	@include appearance(none);
+	background: {
+		image: url($select-arrow);
+		repeat: no-repeat;
+		position: 100% 50%;
+	};
+	border: $select-border-size solid $select-border-color;
+	border-radius: $select-border-radius;
+	cursor: pointer;
+	display: block;
+	margin: 0;
+	padding: 5px 30px 5px 5px;
+	-moz-padding-end: 30px;
+	-webkit-padding-end: 30px;
+	position: relative;
+	white-space: nowrap;
+	width: 100%;
+
+	&[disabled],
+	&[readonly] {
+		cursor: not-allowed;
+		opacity: 0.5;
+	}
+
+	&:focus {
+		box-shadow: 0 0 8px #ccc;
+		outline: 0;
+	}
+
+	&::-ms-expand {
+		display: none;
+	}
+}
+
+//module radio button
+.radio-wrapper {
+	position: relative;
+	margin: 5px 0;
+
+	label {
+		cursor: pointer;
+		display: inline-block;
+		height: $radio-full-size;
+		line-height: $radio-full-size;
+		padding-left: 32px;
+		position: relative;
+	}
+
+	input[type="radio"] {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+
+		~ .fake-box {
+			background: white;
+			border: $radio-border-size solid #ccc;
+			border-radius: 50%;
+			height: $radio-size;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: $radio-size;
+
+			&:after {
+				background: #333;
+				border-radius: 50%;
+				content: '';
+				font-size: 16px;
+				height: 12px;
+				left: 50%;
+				margin-left: -6px;
+				margin-top: -6px;
+				position: absolute;
+				text-align: center;
+				top: 50%;
+				visibility: hidden;
+				width: 12px;
+			}
+		}
+
+		&:checked {
+			~ .fake-box {
+				&:after {
+					visibility: visible;
+				}
+			}
+		}
+
+		&:focus {
+			~ .fake-box {
+				box-shadow: 0 0 8px #ccc;
+			}
+		}
+
+		&:disabled {
+			~ .radio-text,
+			~ .fake-box {
+				opacity: .5;
+				cursor: default;
+			}
+		}
+	}
+}
+
+//module checkbox
+.checkbox-wrapper {
+	position: relative;
+	margin: 5px 0;
+
+	label {
+		cursor: pointer;
+		display: inline-block;
+		height: $checkbox-full-size;
+		line-height: $checkbox-full-size;
+		padding-left: 32px;
+		position: relative;
+	}
+
+	input[type="checkbox"] {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+
+		~ .fake-box {
+			background: white;
+			border: $checkbox-border-size solid #ccc;
+			height: $checkbox-size;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: $checkbox-size;
+
+			&:after {
+				content: '\2713';
+				font-size: 16px;
+				height: $checkbox-size;
+				left: 0;
+				line-height: $checkbox-size;
+				position: absolute;
+				text-align: center;
+				top: 0;
+				visibility: hidden;
+				width: $checkbox-size;
+			}
+		}
+
+		&:checked {
+			~ .fake-box {
+				&:after {
+					visibility: visible;
+				}
+			}
+		}
+
+		&:focus {
+			~ .fake-box {
+				box-shadow: 0 0 8px #ccc;
+			}
+		}
+
+		&:disabled {
+			~ .checkbox-text,
+			~ .fake-box {
+				opacity: .5;
+				cursor: default;
+			}
+		}
+	}
+}
+
+//module file upload
+.field-file {
+	cursor: pointer;
+	display: inline-block;
+	padding: 5px;
+	position: relative;
+
+	input[type="file"] {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+
+		&:disabled {
+			~.indicator {
+				opacity: 0.5;
+
+				~.text {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+
+	.indicator {
+		border: $file-input-border-size solid $file-input-border-color;
+		border-radius: $file-input-border-radius;
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: -1;
+	}
+}
